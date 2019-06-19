@@ -1,0 +1,475 @@
+/* ---------->>> RESET <<<-----------*/
+
+body , h1, h2, h3, p, ul {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Georgia, serif;
+    color: #252525;
+}
+
+*{
+    box-sizing: border-box;
+    /* border: solid 1px black; */
+}
+/* ---------->>> MENU <<<-----------*/
+
+.menu{
+    padding: 20px 0;
+    background: #252525;
+}
+
+.menu-container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.menu-container::after, .menu-container::before{
+    content: ' ';
+    display: table;
+    clear: both;
+}
+
+.menu-logo{
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+
+.menu-nav{
+    float: right;
+    margin-right: 10px;
+}
+
+.menu-nav li{
+    display: inline-block;
+}
+
+.menu-nav a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #FFF;
+}
+
+@media (max-width: 739px){
+    .menu{
+        text-align: center;
+    }
+    .menu-logo{
+        float: none;
+        margin: 0 auto;
+    }
+    .menu-nav{
+        float: none;
+        clear: both;
+    }
+}
+
+/* ---------->>> INTRO <<<-----------*/
+
+.intro{
+    background: url(/img/bg-intro.jpg) no-repeat center center;
+    background-size: cover; /* O background sempre estára 100% em relação à seu tamanho independente do tamanho da tela*/
+    padding: 150px 0; /*Está definindo o tamanho do BG*/
+    text-align: center;
+    color: #FFF;
+}
+
+.intro h1{
+    text-transform: uppercase;
+    font-size: 3em;
+}
+
+.intro h1::after{
+    content: ' ';
+    display: block;
+    width: 20px;
+    height: 4px;
+    background: #FFF; 
+    margin: 10px auto;
+} 
+
+.intro p{
+    font-style: italic;
+    font-size: 1.125em;
+}
+
+@media (max-width: 739px){
+    .intro{
+        padding: 60px 0;
+    }
+}
+
+/* ---------->>> SOBRE <<<-----------*/
+
+.sobre{
+    padding: 60px 0;
+}
+
+.sobre-container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.sobre-container::after, .sobre-container::before{
+    content: ' ';
+    display: table;
+    clear: both;
+}
+
+.sobre h2{
+    text-align: center;
+    font-size: 2.25em;
+    margin-bottom: 60px;
+}
+
+.sobre-item{
+    max-width: 460px;
+    float: left;
+    margin: 0 10px;
+}
+
+.sobre-item img{
+    display: block;
+    max-width: 100%;
+}
+
+.sobre-item h3{
+    font-size: 2.25em;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1em;
+    text-align: center;
+    color: #FFF;
+    width: 220px;
+    padding: 5px 0 10px 0;
+    background: #252525;
+    top: -25px;
+    position: relative;
+}
+
+.sobre > p{
+    font-size: 1.125em;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.4em;
+    margin: 20px auto;
+    max-width: 460px;
+}
+
+@media (min-width: 740px) and (max-width: 980px) {
+    .sobre-container{
+        max-width: 720px;
+    }
+    .sobre-item{
+        width: 340px;
+    }
+}
+
+@media (max-width: 739px){
+    .sobre-container{
+        max-width: 300px;
+    }
+    .sobre-item{
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* ---------->>> PRODUTOS <<<-----------*/
+
+.produtos{
+    background: #E7E4D8;
+    padding: 60px 0;
+    border-top: 3px solid #D6D3C8;
+    border-bottom: 3px solid #D6D3C8;
+}
+
+.produtos-container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.produtos-container::before, .produtos-container::after{
+    content: ' ';
+    display: table;
+    clear: both;
+}
+
+.produtos-item{
+    width: 300px;
+    float: left;
+    margin: 0 10px 20px 10px;
+}
+
+.produtos-item h2{
+    text-align: center;
+    font-size: 2.25em;
+    margin-bottom: 20px; 
+}
+
+.produtos-item h2::before{
+    content: ' ';
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px auto;
+    border: 5px solid #E7E4D8;
+}
+
+h2.produtos-paulista::before{
+    box-shadow: 0 0 0 10px #492901;
+    background: #492901;
+}
+
+h2.produtos-carioca::before{
+    box-shadow: 0 0 0 10px #C17139;
+    background: #C17139;
+}
+
+h2.produtos-mineiro::before{
+    box-shadow: 0 0 0 10px #D7A54D;
+    background: #D7A54D;
+}
+.produtos-item p{
+    font-size: 0,875em;
+    line-height: 1.4em;
+}
+
+.produtos-btn{
+    width: 180px;
+    border: 3px solid #252525; 
+    color: #252525;
+    text-decoration: none;
+    display: block;
+    font-size: 1.125em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0;
+    margin: 20px auto 0 auto;  
+}
+
+@media (min-width: 740px) and (max-width: 980px) {
+    .produtos-container{
+        max-width: 720px;
+    }
+    .produtos-item{
+        width: 220px;
+    }
+}
+
+@media (max-width: 739px){
+    .produtos-container{
+        max-width: 300px;
+    }
+    .produtos-item{
+        margin: 0 auto 20px auto;
+    }
+}
+
+/* ---------->>> LOCAIS <<<-----------*/
+
+.locais{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.locais-item{
+    clear: both;
+    margin: 60px auto;
+}
+
+.locais-item::before, .locais-item::after{
+    content: ' ';
+    display: table;
+    clear: both;
+}
+
+.locais-item img{
+    width: 460px;
+    display: block;
+    float: left;
+    margin: 0 10px;
+}
+
+.locais-item > div{
+    width: 460px;
+    float: left;
+    margin: 0 10px;
+}
+
+.locais-item h2{
+    font-size: 2.25em;
+    margin-bottom: 20px;
+}
+
+.locais-item p{
+    font-size: 1.125em;
+    line-height: 1.4em;
+    max-width: 320px;
+    margin-bottom: 40px;
+}
+
+.locais-item a{
+    font-size: 1.125em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #252525;
+    border: 3px solid ;
+    padding: 10px 20px;
+}
+
+@media (min-width: 740px) and (max-width: 980px) {
+    .locais{
+        max-width: 720px;
+    }
+    .locais-item > div, .locais-item img{
+        width: 340px;
+    }
+}
+
+@media (max-width: 739px){
+    .locais{
+        max-width: 300px;
+    }
+    .locais-item > div, .locais-item img{
+        width: 300px;
+        margin: 0px;
+    }
+}
+
+/* ---------->>> NEWSLETTER <<<-----------*/
+
+.assine{
+    background: #E7E4D8;
+    padding: 30px 0;
+}
+
+.assine-container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.assine-container::before, .assine-container::after{
+    content: ' ';
+    display: table;
+    clear: both;
+}
+
+.assine-info{
+    width: 460px;
+    margin: 0 10px;
+    float: left;
+}
+
+.assine-info h2{
+    font-size: 2.25em;
+}
+
+.assine-info p{
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.assine form {
+    width: 460px;
+    margin: 10px 10px 0 10px;
+    float: left; 
+}
+
+.assine form label{
+    display: none;
+}
+
+.assine input {
+    width: 320px;
+    border: 3px solid #252525;
+    background: none;
+    font-size: 1.5em;
+    font-style: italic;
+    font-family: Georgia, serif;
+    padding: 10px;
+    float: left;
+}
+
+.assine button{
+    background: #252525;
+    font-family: Georgia, serif;
+    text-transform: uppercase;
+    width: 140px;
+    padding: 13px 0;
+    color:  #FFF;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media (min-width: 740px) and (max-width: 980px) {
+    .assine-container{
+        max-width: 720px; 
+    }
+    .assine-info, .assine form,  .assine input, .assine button{
+        width: 340px;
+    }
+}
+
+@media (max-width: 739px){
+    .assine-container{
+        width: 300px;
+    }
+    .assine-info, .assine form,  .assine input, .assine button{
+        width: 300px;
+        margin: 10px 0 0 0 ;
+    }
+}
+
+/* ---------->>> FOOTER <<<-----------*/
+
+.footer{
+    padding: 40px 0;
+    background: #D6D3C8;
+}
+
+.footer-container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.footer-container::before, .footer-container::after{
+    content: ' ';
+    display: table;
+    clear: both;
+}
+
+.footer p{
+    float: left;
+    margin: 0 10px;
+    font-size: 1.125em;
+    line-height: 1.4em;
+}
+
+.footer img{
+    float: right;
+    display: block;
+    margin: 0 10px;
+}
+
+@media (max-width: 739px){
+    .footer-container{
+        max-width: 300px;
+    }
+    .footer p{
+        float: none;
+        margin: 0px; 
+    }
+    .footer img{
+        float: none;
+        margin: 10px 0; 
+    }
+}
