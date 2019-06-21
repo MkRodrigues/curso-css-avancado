@@ -71,7 +71,7 @@ body{
 /* ---------->>> INTRO <<<-----------*/
 
 .intro{
-    background: url(/img/bg-intro.jpg) no-repeat center center;
+    background: url(../img/bg-intro.jpg) no-repeat center center;
     background-size: cover; /* O background sempre estára 100% em relação à seu tamanho independente do tamanho da tela*/
     padding: 150px 0; /*Está definindo o tamanho do BG*/
     text-align: center;
