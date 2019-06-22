@@ -61,3 +61,209 @@ li {
     content: ' '; 
 }
 
+/* ---------->>> MAIN <<<-----------*/
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.container::before, .container::after {
+    content: ' ';
+    display: table;
+    clear: both;
+}
+
+@media (min-width: 740px) and (max-width: 980px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 739px) {
+    .container {
+        max-width: 300px;
+    }
+}
+
+/* ---------->>> FILTRO <<<-----------*/
+
+.filtro {
+    width: 300px;
+    margin: 0 10px;
+    padding: 20px;
+    border: 3px solid #D6D3C8;
+    background: #E7E4D8;
+    float: left;
+}
+
+.filtro h2 {
+    font-size: 1.125em;
+    padding: 10px 0;
+}
+
+.filtro ul {
+    border-top: 3px solid #C0BEB4;
+    border-bottom: 3px solid #C0BEB4;
+    padding: 10px 0;
+}
+
+.filtro li {
+    font-size: 1.125em;
+    font-style: italic;
+    line-height: 2;
+}
+
+.filtro li::after {
+    content: ' ';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #C0BEB4;
+    float: right;
+    margin-top: 5px;
+}
+
+.sabor {
+    overflow: hidden;
+}
+
+.sabor span {
+    text-indent: -200px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: currentColor;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.sabor-3 {
+    color: #492901;
+    box-shadow: 20px 0 0 0 currentColor,
+    40px 0 0 0 currentColor;
+}
+
+.sabor-4 {
+    color: #C17139;
+    box-shadow: 20px 0 0 0 currentColor,
+    40px 0 0 0 currentColor,
+    60px 0 0 0 currentColor;
+}
+
+.sabor-5 {
+    color: #D7A54D;
+    box-shadow: 20px 0 0 0 currentColor,
+    40px 0 0 0 currentColor,
+    60px 0 0 0 currentColor,
+    80px 0 0 0 currentColor;
+}
+
+@media (min-width: 740px) and (max-width: 980px) {
+    .filtro {
+        width: 220px;
+    }
+}
+
+/* 
+
+Tamanho do Container (Definido no @media acima) 720px dividido pelo tanto de colunas ((12) - Grid Template usado no photoshop) , vezes o número de colunas que o item (filtro) oculpa (4) 
+
+720px / 12 * 4 = 240px 
+240px - gutter (20) = 220px
+
+*/
+
+@media (max-width: 739px) {
+    .filtro {
+        display: none;
+    }
+}
+
+/* ---------->>> PRODUTOS <<<-----------*/
+
+.produtos {
+    width: 620px;
+    margin: 0 10px;
+    float: left; 
+}   
+
+
+.produtos h1 {
+    font-size: 3em;
+    font-weight: normal;
+}
+
+.produtos li {
+    width: 300px;
+    float: left; 
+}
+
+/* even - todos os elementos pares/ odd - todos os elementos ímpares */
+.produtos li:nth-child(even){
+    margin-left: 20px;
+}   
+
+.produtos li img {
+    display: block;
+    max-width: 100%;
+    border: 3px solid #FFF;
+    box-shadow: 0 0 0 3px #252525;  /* 1° elemento movimenta a sombra para o lado, 2° elemento movimenta para baixo, 3° elemento insere blur, 4° elemento aumenta o tamanho da sombra vazando o elemento filho, 5° elemento insere cor na sombra */
+    margin: 40px 3px 0 3px;
+}
+
+.produtos li span {
+    background: #E7E4D8;
+    padding: 10px;
+    font-size: 0.875em;
+    font-weight: bold;
+    position: relative;
+    top: -15px;
+}
+
+.produtos li h2 {
+    font-size: 0.875em;
+    font-weight: normal;
+}
+
+@media (min-width: 740px) and (max-width: 980px) {
+    
+    .produtos {
+        width: 460px;
+    }
+    
+    .produtos li {
+        width: 220px;
+    }
+}
+
+/* 
+
+Para obter a largura de produtos:
+720px / 12 * 8 colunas = 480px 
+
+480px - gutter (20px) = 460px
+
+*/
+
+@media (max-width: 739px) {
+    
+    .produtos {
+        width: 300px;
+    }
+    
+    .produtos li {
+        width: 140px;     /*  300px / 2 = 150 - 10 gutter = 140px */
+    }
+}
+
+/* ---------->>> FOOTER <<<-----------*/
+
+.footer {
+    background: #E7E4D8;
+    text-align: center;
+    padding: 60px 0;
+    font-size: 1.125em;
+    line-height: 1.4em;
+    margin-top: 80px;
+}
